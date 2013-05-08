@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN"
+"http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+
+<html>
+  <head>
+    <title>Video Party</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <!-- only if the device support viewport: iOS / Android / BB>5 -->
+    <!--<meta name = "viewport" content = "width=device-width" />-->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+
+  <!-- change body class according to resolution -->
+  <body class="en">
+	<div id="wrap">
+      
+      <div id="pricing">{pricing_info}</div>
+      
+      <div class="to_field">
+        To:&nbsp;&nbsp;<span class="kword">4223</span>
+        <div class="plus">+</div>
+      </div>
+      
+      <!-- header_section -->
+      <div id="header_section">
+        <p class="header_text">Just type <span>FUN</span> then <span>send</span> it!</p>
+        <img src="assets/images/main_headers/header-P640-en.jpg" alt="header"/>
+      </div>
+      
+      <div class="compose">
+        <img src="assets/images/page_bg/compose-camera.png" width="27" height="27" alt="camera" />
+        <div class="send_button">Send</div>
+        <div class="compose_field">FUN</div>
+      </div>
+
+
+      <ul id="iphone-keyboard">
+        <li>
+          
+          <button type="button">Q<div class="button_pressed">Q</div></button>
+          <button type="button">W</button>
+          <button type="button">E</button>
+          <button type="button">R</button>
+          <button type="button">T</button>
+          <button type="button">Y</button>
+          <button type="button">U</button>
+          <button type="button">I</button>
+          <button type="button">O</button>
+          <button type="button">P<div class="button_pressed">P</div></button>
+        </li>
+        <li>
+          <button type="button">A</button>
+          <button type="button">S</button>
+          <button type="button">D</button>
+          <button type="button">F</button>
+          <button type="button">G</button>
+          <button type="button">H</button>
+          <button type="button">J</button>
+          <button type="button">K</button>
+          <button type="button">L</button>
+        </li>
+        <li>
+          <button type="button" class="specialkey shift">S</button>
+          <button type="button">Z</button>
+          <button type="button">X</button>
+          <button type="button">C</button>
+          <button type="button">V</button>
+          <button type="button">B</button>
+          <button type="button">N</button>
+          <button type="button">M</button>
+          <button type="button" class="specialkey backspace">B</button>
+        </li>
+        <li>
+          <button type="button" class="specialkey numbers">123</button>
+          <button type="button" class="specialkey international">I</button>
+          <button type="button" class="space">space</button>
+          <button type="button" class="specialkey return">return</button>
+        </li>
+      </ul>
+             
+      <!-- lang_country_section -->
+      <div id="lang_country_section"> 
+        <a href="{@langUrl}" class="langbtn">
+          <img src="assets/images/language_btns/language_btn-ae-ar.gif" width="103" height="33" alt="Arabic" /> 
+        </a> 
+      </div>
+      
+      <!-- disclaimer_section -->
+      <div id="disclaimer_section">
+        Copyright &copy; 2013 This is a subscription service active until you send UNSUB to 2215. You will receive 10 game credits upon subscription for free and will receive 3 times per week a billed SMS message. Each time you are billed 10 game credits are added to your account, credits expire after 7 days. To make use of this service you must be more than 18 years old or have received permission from your parents or person who is authorized to pay your bill. Movie Master works in accordance with the international code of conduct for SMS services.
+      </div> 
+ 	</div> 
+    
+    <script type="text/javascript">
+      //<![CDATA[
+      function hideAddressBar(){
+        if(!window.location.hash){
+          if(document.height < window.outerHeight){document.body.style.height = (window.outerHeight + 50) + 'px';}
+          setTimeout( function(){ window.scrollTo(0, 1); }, 50 );}
+        }
+        
+        window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+        window.addEventListener("orientationchange", hideAddressBar );
+      //]]>
+    </script>
+  </body>
+</html>

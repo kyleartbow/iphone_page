@@ -1,0 +1,348 @@
+@charset UTF-8;
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+	border:0;
+	outline:0;
+	font-size:100%;
+	font-weight:400;
+	vertical-align:baseline;
+	background:transparent;
+	margin:0;
+	padding:0;}
+ol,ul{list-style:none;}
+a{
+	font-weight:400;
+	margin:0;
+	padding:0;}
+body{
+	font-size:100%;
+	font-weight:400;
+	font-family:Helvetica, Arial, sans-serif;
+	line-height:1;
+	color:#fff;
+	background-color:#000;}
+#wrap{
+	width:100%;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;}
+
+
+/* --------- LANGUAGES --------- */
+.en{direction:ltr;}
+.ar{direction:rtl;}
+
+
+/* --------- HEADER --------- */
+#pricing{
+	color:#fff;
+	text-shadow:0 1px 2px #000;
+	text-align:center;
+	font-weight:normal;
+	font-size:9px;
+	width:100%;
+	margin:0;
+	padding:5px 0 5px 0;
+	background-color:#000;
+	background-position:bottom;}
+#header_section{
+	text-align:center;
+	width:100%;
+	margin:0;
+	padding:0;
+	position:relative;}
+#header_section img{
+	width:100%;
+	border:none;
+	outline:none;
+	display:block;}
+.header_text{
+	width:100%;
+	position:absolute;
+	bottom:10px;
+	text-shadow:0 1px #000;}
+.header_text span{
+	font-weight:bold;
+	color:#ffc72f;}
+
+
+
+/* --------- DISCLAIMER AREA --------- */
+#lang_country_section{
+	text-align:center;
+	width:auto;}
+.langbtn{
+	display:block;
+	width:103px;
+	height:33px;
+	outline:none;
+	border:none;
+	border-image:none;
+	margin:10px auto;}
+#disclaimer_section{
+	clear:both;
+	font-size:11px;
+	width:auto;
+	height:auto;
+	margin:10px 10px 10px;
+	padding:0;
+	color:#fff;
+	opacity:30;
+	-webkit-opacity:.3;}
+
+#sub_method #sms_to,
+#one_click,
+#number_entry1{display:none;}
+
+
+
+
+/* --------- FOR IPHONE --------- */
+.to_field{
+	width:auto;
+	background-color:#fff;
+	border-bottom:1px solid #ccc;
+	color:#7f7f7f;
+	padding:11px;}
+.kword{color:#000;}
+.plus{
+	width:20px;
+	height:20px;
+	background: #4e8be0;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(49%,#4e8be0), color-stop(49%,#236ed8));
+	background: -webkit-linear-gradient(top,  #4e8be0 49%,#236ed8 49%);
+	background: linear-gradient(to bottom,  #4e8be0 49%,#236ed8 49%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8be0', endColorstr='#236ed8',GradientType=0 );
+	border:2px solid #fff;
+	box-shadow:0 1px 2px #666;
+	border-radius:20px;
+	color:#fff;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:0 -1px #0055d1;
+	float:right;
+	margin:-5px 0 0 0;}
+
+	
+/* --------- COMPOSE --------- */	
+.compose{
+	width:auto;
+	height:20px;
+	background: #eeeeef;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeef), color-stop(100%,#c5c7cb));
+	background: -webkit-linear-gradient(top,  #eeeeef 0%,#c5c7cb 100%);
+	background: linear-gradient(to bottom,  #eeeeef 0%,#c5c7cb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeef', endColorstr='#c5c7cb',GradientType=0 );
+	border-bottom:1px solid #383a3c;
+	padding:10px;}
+.compose img{
+	float:left;
+	margin-top:-3px;}
+.compose_field{
+	height:15px;
+	background-color:#fff;
+	border-top:1px solid #4b4b4b;
+	border-right:1px solid #4b4b4b;
+	border-bottom:1px solid #707070;
+	border-left:1px solid #4b4b4b;
+	border-radius:20px;
+	box-shadow:0 1px #eeeeef, inset 0 1px 5px #666;
+	margin:-3px 73px 0 30px;
+	padding:5px;
+	text-indent:5px;
+	color:#000;
+	float:none;} 
+.send_button{
+	width:57px;
+	background: linear-gradient(to bottom,  #acd070 1%,#6eae35 15%,#6eae35 51%,#56a01d 51%,#479d18 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#acd070', endColorstr='#479d18',GradientType=0 );
+	border-top:1px solid #317217;
+	border-right:1px solid #317217;
+	border-bottom:1px solid #226b0c;
+	border-left:1px solid #317217;
+	border-radius:20px;
+	box-shadow:0 1px #eeeeef;
+	margin:-3px 0 0 0;
+	padding:5px;
+	text-align:center;
+	text-shadow:0 -1px #3d7415;
+	font-weight:bold;
+	float:right;
+	
+	animation:changecolor 1s;
+	animation-iteration-count:infinite;
+	-webkit-animation:changecolor 1s;
+	-webkit-animation-iteration-count:infinite;}
+
+	@keyframes changecolor{
+	  0%{box-shadow:inset 0 0 0 1px rgba(255,255,255,.5), 0 0 0 1px rgba(255,255,255,.5);}
+	  50%{box-shadow:inset 0 0 5px #c8e0a0, 0 0 10px 5px #91d36c;}
+	  100%{box-shadow:inset 0 0 0 1px rgba(255,255,255,.5), 0 0 0 1px rgba(255,255,255,.5);}
+	}
+	
+	@-webkit-keyframes changecolor{
+	  0%, 100%{
+		  -webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,.5), 0 0 0 1px rgba(255,255,255,.5);
+		  background: #acd070;
+		  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#acd070), color-stop(15%,#6eae35), color-stop(51%,#6eae35), color-stop(51%,#56a01d), color-stop(100%,#479d18));
+		  background: -webkit-linear-gradient(top,  #acd070 1%,#6eae35 15%,#6eae35 51%,#56a01d 51%,#479d18 100%);}
+	  50%{
+		  -webkit-box-shadow:inset 0 0 5px #c8e0a0, 0 0 10px 5px #91d36c;
+		  background: #d6e890;
+		  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6e890), color-stop(16%,#91c526), color-stop(51%,#91c526), color-stop(51%,#7bb913), color-stop(100%,#609b00));
+		  background: -webkit-linear-gradient(top,  #d6e890 0%,#91c526 16%,#91c526 51%,#7bb913 51%,#609b00 100%);}
+	}
+	
+
+/* --------- KEYBOARD --------- */
+.button_pressed{
+		position:absolute;
+		top:-70px;
+		left:-15px;
+		width:55px;
+		height:107px;
+		background:url(../images/page_bg/button-pressed.png) no-repeat;
+		background-size:55px 107px;
+		z-index:2;
+		font-size:40px;
+		font-weight:bold;
+		line-height:60px;}
+@font-face {
+	font-family: 'iPhone keyboard';
+	src:url(../images/page_bg/iphone-keyboard.ttf);}
+#iphone-keyboard {
+	max-width:960px;
+	min-width:320px;
+	margin:0 auto;
+	padding:2px;
+	background:#757D8A;
+	background-image:-moz-linear-gradient(#9098A3, #454f5d);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#9098A3), to(#454f5d));
+	box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+	-webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+	border-radius:0 0 2px 2px;
+	position:relative;}
+
+	#iphone-keyboard li {
+		text-align:center;
+		margin:.5em .1em .25em;
+		list-style:none;}
+	
+	#iphone-keyboard li:first-child {margin-top:.3em;}
+	
+	#iphone-keyboard button,
+	#iphone-keyboard button.specialkey:active {
+		color:#3A3D42;
+		text-decoration:none;
+		text-align:center;
+		text-shadow:0 1px 1px white;
+		font-weight:bold;
+		border:0;
+		border-top:1px solid rgba(255,255,255,.45);		
+		background:#ECEDEF;
+		background-image:-moz-linear-gradient(#f8f8f9, #dddfe1);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#f8f8f9), to(#dddfe1));
+		border-radius:4px;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		box-shadow:0 1px 3px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.3);
+		-moz-box-shadow:0 1px 3px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.3);
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.3);
+		position:relative;}
+	
+	#iphone-keyboard button {
+		display:inline-block;
+		width:8.6%;
+		margin:0 .25%;
+		padding:.02em 0 .03em;
+		color:black;
+		font-size:1.35em;
+		font-family:Helvetica, Arial, sans-serif;}
+	
+	#iphone-keyboard button:hover,
+	#iphone-keyboard button.space:hover {
+		background-image:-moz-linear-gradient(#E2E3E4, #AAADB4);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#E2E3E4), to(#AAADB4));}
+	
+	#iphone-keyboard button.specialkey {
+		background:#757D8A;
+		background-image:-moz-linear-gradient(#7f8792, #535b68);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#7f8792), to(#535b68));
+		color:white;
+		text-shadow:0 -1px 1px rgba(0,0,0,.5);}
+	
+	#iphone-keyboard button.space,
+	#iphone-keyboard button.return,
+	#iphone-keyboard button.numbers,
+	#iphone-keyboard button.international {
+		font-size:1.04em;
+		padding:.25em 0;}
+	
+	#iphone-keyboard button.shift,
+	#iphone-keyboard button.international,
+	#iphone-keyboard button.backspace {font-family:'iPhone keyboard', Helvetica, sans-serif;}
+	
+	#iphone-keyboard button.shift,
+	#iphone-keyboard button.backspace {
+		background-image:-moz-linear-gradient(#939ba6, #687180);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#939ba6), to(#687180));}
+		
+	#iphone-keyboard button.shift {
+		width:12%;
+		float:left;}
+	
+	#iphone-keyboard button.backspace {
+		width:12%;
+		float:right;}
+	
+	#iphone-keyboard button.numbers {
+		width:8.4%;
+		margin-right:1.4%;
+		float:left;}
+	
+	#iphone-keyboard button.international {
+		width:8.2%;
+		float:left;}
+	
+	#iphone-keyboard button.space {
+		width:59%;
+		color:#525c69;
+		background-image:-moz-linear-gradient(#dddfe2, #b4b8bf);
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#dddfe2), to(#b4b8bf));}
+	
+	#iphone-keyboard button.return {
+		float:right;
+		width:18.9%;}
+
+
+/* --------- SMALLER SCREEN --------- */
+	@media screen and (max-width: 479px) {
+	#iphone-keyboard {max-width:480px;}
+	#iphone-keyboard li {margin-top:1em;}
+	#iphone-keyboard li:first-child {margin-top:.7em;}
+	#iphone-keyboard button {
+		width:8.25%;
+		padding:.16em 0;}
+		
+	#iphone-keyboard button.space,
+	#iphone-keyboard button.return,
+	#iphone-keyboard button.numbers,
+	#iphone-keyboard button.international {padding:.4em 0;}
+	
+	#iphone-keyboard button.backspace {
+		width:12%;
+		padding-left:0;}
+		
+	#iphone-keyboard button.numbers {width:11%;}
+	
+	#iphone-keyboard button.international {
+		width:11%;
+		padding:.38em 0;}
+	
+	#iphone-keyboard button.space {width:48%;}
+	#iphone-keyboard button.return {width:24%;}
+}
