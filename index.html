@@ -31,44 +31,44 @@
       <div class="compose">
         <img src="assets/images/page_bg/compose-camera.png" width="27" height="27" alt="camera" />
         <div class="send_button">Send</div>
-        <div class="compose_field">FUN</div>
+        <div class="compose_field" id="keyword-in-composer">FUN</div>
       </div>
 
 
       <ul id="iphone-keyboard">
         <li>
           
-          <button type="button">Q<div class="button_pressed">Q</div></button>
-          <button type="button">W</button>
-          <button type="button">E</button>
-          <button type="button">R</button>
-          <button type="button">T</button>
-          <button type="button">Y</button>
-          <button type="button">U</button>
-          <button type="button">I</button>
-          <button type="button">O</button>
-          <button type="button">P<div class="button_pressed">P</div></button>
+          <button type="button" id="key-Q">Q</button>
+          <button type="button" id="key-W">W</button>
+          <button type="button" id="key-E">E</button>
+          <button type="button" id="key-R">R</button>
+          <button type="button" id="key-T">T</button>
+          <button type="button" id="key-Y">Y</button>
+          <button type="button" id="key-U">U</button>
+          <button type="button" id="key-I">I</button>
+          <button type="button" id="key-O">O</button>
+          <button type="button" id="key-P">P</button>
         </li>
         <li>
-          <button type="button">A</button>
-          <button type="button">S</button>
-          <button type="button">D</button>
-          <button type="button">F</button>
-          <button type="button">G</button>
-          <button type="button">H</button>
-          <button type="button">J</button>
-          <button type="button">K</button>
-          <button type="button">L</button>
+          <button type="button" id="key-A">A</button>
+          <button type="button" id="key-S">S</button>
+          <button type="button" id="key-D">D</button>
+          <button type="button" id="key-F">F</button>
+          <button type="button" id="key-G">G</button>
+          <button type="button" id="key-H">H</button>
+          <button type="button" id="key-J">J</button>
+          <button type="button" id="key-K">K</button>
+          <button type="button" id="key-L">L</button>
         </li>
         <li>
           <button type="button" class="specialkey shift">S</button>
-          <button type="button">Z</button>
-          <button type="button">X</button>
-          <button type="button">C</button>
-          <button type="button">V</button>
-          <button type="button">B</button>
-          <button type="button">N</button>
-          <button type="button">M</button>
+          <button type="button" id="key-Z">Z</button>
+          <button type="button" id="key-X">X</button>
+          <button type="button" id="key-C">C</button>
+          <button type="button" id="key-V">V</button>
+          <button type="button" id="key-B">B</button>
+          <button type="button" id="key-N">N</button>
+          <button type="button" id="key-M">M</button>
           <button type="button" class="specialkey backspace">B</button>
         </li>
         <li>
@@ -99,8 +99,37 @@
           if(document.height < window.outerHeight){document.body.style.height = (window.outerHeight + 50) + 'px';}
           setTimeout( function(){ window.scrollTo(0, 1); }, 50 );}
         }
-        
-        window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+
+        window.addEventListener("load", function(){
+            if(!window.pageYOffset){ hideAddressBar(); }
+
+            var keyword = document.getElementById("keyword-in-composer").innerText;
+            var interval = 500;
+            var delay = 1000;
+
+            var keywordarr = keyword.split('');
+            var length = keywordarr.length;
+            var index = -1, character = null, el = null, showNext = null;
+            var next = function() {
+                if(!!el) {
+                    el.innerHTML = character;
+                }
+                showNext = function() {
+                    character = keywordarr[(++index)%length];
+                    el = document.getElementById("key-" + character);
+                    el.innerHTML = '<div class="button_pressed">' + character + '</div>';
+                    setTimeout(next, interval);
+                };
+                if((index % length) == length-1) {
+                    setTimeout(showNext,delay);
+                } else {
+                    showNext();
+                }
+            }
+            next();
+
+            //<div class="button_pressed">Q</div>
+        });
         window.addEventListener("orientationchange", hideAddressBar );
       //]]>
     </script>
