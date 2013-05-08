@@ -35,8 +35,9 @@
       </div>
 
 
-      <ul id="iphone-keyboard">
-        <li>
+      <div id="iphone-keyboard">
+        <div id="button-pressed" class="button_pressed">Q</div>
+        <div class="row">
           
           <button type="button" id="key-Q">Q</button>
           <button type="button" id="key-W">W</button>
@@ -48,8 +49,8 @@
           <button type="button" id="key-I">I</button>
           <button type="button" id="key-O">O</button>
           <button type="button" id="key-P">P</button>
-        </li>
-        <li>
+        </div>
+      <div class="row">
           <button type="button" id="key-A">A</button>
           <button type="button" id="key-S">S</button>
           <button type="button" id="key-D">D</button>
@@ -59,8 +60,8 @@
           <button type="button" id="key-J">J</button>
           <button type="button" id="key-K">K</button>
           <button type="button" id="key-L">L</button>
-        </li>
-        <li>
+        </div>
+      <div class="row">
           <button type="button" class="specialkey shift">S</button>
           <button type="button" id="key-Z">Z</button>
           <button type="button" id="key-X">X</button>
@@ -70,14 +71,14 @@
           <button type="button" id="key-N">N</button>
           <button type="button" id="key-M">M</button>
           <button type="button" class="specialkey backspace">B</button>
-        </li>
-        <li>
+        </div>
+        <div class="row">
           <button type="button" class="specialkey numbers">123</button>
           <button type="button" class="specialkey international">I</button>
           <button type="button" class="space">space</button>
           <button type="button" class="specialkey return">return</button>
-        </li>
-      </ul>
+        </div>
+      </div>
              
       <!-- lang_country_section -->
       <div id="lang_country_section"> 
@@ -107,17 +108,20 @@
             var interval = 500;
             var delay = 1000;
 
+            var $pressed = document.getElementById("button-pressed");
             var keywordarr = keyword.split('');
             var length = keywordarr.length;
-            var index = -1, character = null, el = null, showNext = null;
+            var index = -1, character = null, $el = null, showNext = null;
             var next = function() {
-                if(!!el) {
-                    el.innerHTML = character;
-                }
+                $pressed.style.display = "none";
+
                 showNext = function() {
                     character = keywordarr[(++index)%length];
-                    el = document.getElementById("key-" + character);
-                    el.innerHTML = character + '<div class="button_pressed">' + character + '</div>';
+                    $el = document.getElementById("key-" + character);
+                    $pressed.style.top = ($el.offsetTop + $el.offsetHeight + 2) + "px";
+                    $pressed.style.left = ($el.offsetLeft + $el.offsetWidth/2) + "px";
+                    $pressed.innerHTML = character;
+                    $pressed.style.display = "block";
                     setTimeout(next, interval);
                 };
                 if((index % length) == length-1) {
