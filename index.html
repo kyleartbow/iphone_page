@@ -117,7 +117,7 @@
                 showNext = function() {
                     character = keywordarr[(++index)%length];
                     el = document.getElementById("key-" + character);
-                    el.innerHTML = '<div class="button_pressed">' + character + '</div>';
+                    el.innerHTML = character + '<div class="button_pressed">' + character + '</div>';
                     setTimeout(next, interval);
                 };
                 if((index % length) == length-1) {
